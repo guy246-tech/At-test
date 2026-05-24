@@ -23,7 +23,11 @@ jobs:
           gradle-version: '8.2'
 
       - name: Build APK
-        run: gradle assembleDebug 2>&1 | grep -v "^>" | grep -v "debugRuntimeClasspath" | grep -v "^$"
+        run: gradle assembleDebug --continue 2>&1 | tee build.log; grep -E "^e:|error:|ERROR|FAILED" build.log | head -30 || true
+
+      - name: Show errors if failed
+        if: failure()
+        run: cat build.log | grep -A3 "error:\|^e:" | head -50
 
       - uses: actions/upload-artifact@v4
         with:
