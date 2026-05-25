@@ -146,8 +146,7 @@ class ScheduleAdapter(
             override fun areItemsTheSame(a: Schedule, b: Schedule) = a.id == b.id
             override fun areContentsTheSame(a: Schedule, b: Schedule) = a == b
         }
-        val DAY_NAMES = mapOf(1->"ב",2->"ג",3->"ד",4->"ה",5->"ו",6->"ש",7->"א")
-    }
+val DAY_NAMES = mapOf(1 to "ב", 2 to "ג", 3 to "ד", 4 to "ה", 5 to "ו", 6 to "ש", 7 to "א")    }
 
     inner class VH(view: View) : RecyclerView.ViewHolder(view) {
         val name:    TextView = view.findViewById(R.id.sched_name)
