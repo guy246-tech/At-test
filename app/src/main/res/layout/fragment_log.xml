@@ -36,7 +36,6 @@
             android:text="נקה"/>
     </LinearLayout>
 
-    <!-- Stats card -->
     <androidx.cardview.widget.CardView
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
@@ -57,7 +56,7 @@
                 android:orientation="horizontal">
                 <TextView android:id="@+id/stat_total"
                     android:layout_width="0dp" android:layout_height="wrap_content"
-                    android:text="סהכ: 0"
+                    android:layout_weight="1" android:text="סהכ: 0" android:textSize="13sp"/>
                 <TextView android:id="@+id/stat_answered"
                     android:layout_width="0dp" android:layout_height="wrap_content"
                     android:layout_weight="1" android:text="נענו: 0" android:textSize="13sp" android:textColor="#2e7d32"/>
@@ -77,16 +76,16 @@
             </LinearLayout>
 
             <LinearLayout
-                android:text="סה&quot;כ: 0"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_marginTop="4dp">
                 <TextView android:id="@+id/stat_avg_dur"
-                    android:text="סהכ זמן: 0:00"
+                    android:layout_width="0dp" android:layout_height="wrap_content"
                     android:layout_weight="1" android:text="ממוצע: 0:00" android:textSize="13sp"/>
                 <TextView android:id="@+id/stat_total_dur"
                     android:layout_width="0dp" android:layout_height="wrap_content"
-                    android:layout_weight="1" android:text="סה\"כ זמן: 0:00" android:textSize="13sp"/>
+                    android:layout_weight="1" android:text="סהכ זמן: 0:00" android:textSize="13sp"/>
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
